@@ -6,7 +6,7 @@ import './App.css'
 // import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
 const App = () => {
     return (
-        <div className={currentMode === 'Dark' ? 'dark' : ''}>
+        // <div className={currentMode === 'Dark' ? 'dark' : ''}>
           <BrowserRouter>
           <div className="flex relative dark:bg-main-dark-bg">
           <div className="fixed right-4 bottom-4" style={{ zIndex: '1000' }}>
@@ -16,9 +16,9 @@ const App = () => {
             >
               <button
                 type="button"
-                onClick={() => setThemeSettings(true)}
-                style={{ background: currentColor, borderRadius: '50%' }}
-                className="text-3xl text-white p-3 hover:drop-shadow-xl hover:bg-light-gray"
+                // onClick={() => setThemeSettings(true)}
+                // style={{ background: currentColor, borderRadius: '50%' }}
+                // className="text-3xl text-white p-3 hover:drop-shadow-xl hover:bg-light-gray"
               >
                 <FiSettings />
               </button>
@@ -27,7 +27,7 @@ const App = () => {
             </div>
             
           </BrowserRouter>
-        </div>
+        // </div>
       ); 
     }
 
