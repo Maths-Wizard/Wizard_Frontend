@@ -5,6 +5,7 @@ import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import './App.css'
 // import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
 const App = () => {
+  const activeMenu = false; 
     return (
         // <div className={currentMode === 'Dark' ? 'dark' : ''}>
           <BrowserRouter>
@@ -14,20 +15,40 @@ const App = () => {
               content="Settings"
               position="Top"
             >
-              <button
-                type="button"
-                // onClick={() => setThemeSettings(true)}
-                // style={{ background: currentColor, borderRadius: '50%' }}
-                // className="text-3xl text-white p-3 hover:drop-shadow-xl hover:bg-light-gray"
-              >
-                <FiSettings />
-              </button>
+              
               </TooltipComponent>
             </div>
+            {activeMenu ? (
+            <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white ">
+              Sidebar
             </div>
-            
+          ) : (
+            <div className="w-0 dark:bg-secondary-dark-bg">
+              Sidebar
+            </div>
+          )}
+
+          <div className={'dark:bg-main-bg bg-main-bg min-h-screen w-full ${activeMenu ? }'
+        
+        }>
+
+          
+
+
+            <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full ">
+              
+            </div>
+            </div>
+            <div>
+              
+              <Routes>
+                
+                
+              </Routes>
+            </div>
+            </div>
           </BrowserRouter>
-        // </div>
+         //</div>
       ); 
     }
 
